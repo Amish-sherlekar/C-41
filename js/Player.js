@@ -3,6 +3,7 @@ class Player{
     constructor(){
         this.name= null
         this.index= null
+        this.distance=0
     }
 
     getCount(){
@@ -20,7 +21,8 @@ class Player{
    update(){
 
     database.ref('players/player'+this.index).set({
-        name:this.name
+        name:this.name,
+        distance:this.distance
     })
    }
 
